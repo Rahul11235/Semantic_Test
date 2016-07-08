@@ -1,6 +1,7 @@
 # Semantic_Test
-##This Repository is for python scripts that we have create for the test.
-## This code is for output 1 and output 2
+#This Repository is for python scripts that we have create for the test.
+# This code is for output 1 and output 2
+#This code is created by Rahul Mahajan
 import pandas as pd
 
 Data1=pd.read_csv("E:\Whole_Data2012.csv",usecols=[0,1,5,24])
@@ -30,7 +31,7 @@ z.plot(kind="bar")
 pyplot.show()       
 
 
-#### This code for csv/tsv file
+# This code for csv/tsv file
 
 Header=["Complaint Type","Counts"]
 m=["Street Light Condition","28738"]
@@ -75,3 +76,5 @@ with open("R2.csv","w") as fd2:
     fd3.writerow(n2)
     fd3.writerow(n3)
     fd3.writerow(n4)
+#############################################################################################
+
