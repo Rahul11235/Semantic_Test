@@ -1,0 +1,56 @@
+import pandas as pd
+import numpy as np
+x=pd.read_csv("E:\Kiran.csv",usecols=[0,1,5,24])
+x[:5]
+x[:5]['Complaint Type']
+D= x['Complaint Type'] !=0
+E=x['Borough']=="QUEENS"
+y= x[D & E]
+QUEEN=y["Complaint Type"].value_counts()
+count=QUEEN[:10]
+print(count)
+
+
+'''
+>>> x[:5]
+   Unique Key            Created Date                 Complaint Type  \
+0    25717038  06/11/2013 09:12:44 AM       Benefit Card Replacement   
+1    26859720  12/11/2013 10:43:29 AM  Root/Sewer/Sidewalk Condition   
+2    26698151  11/16/2013 12:20:00 PM               Dirty Conditions   
+3    25714097  06/10/2013 10:59:23 AM       Benefit Card Replacement   
+4    25713862  06/10/2013 07:13:18 PM       Benefit Card Replacement   
+
+       Borough  
+0  Unspecified  
+1       QUEENS  
+2       QUEENS  
+3  Unspecified  
+4  Unspecified
+
+output :
+    
+Street Light Condition    28603
+Noise - Residential       28148
+HEATING                   24893
+Blocked Driveway          23761
+Street Condition          21616
+Water System              13200
+Sewer                     13136
+GENERAL CONSTRUCTION      12523
+Illegal Parking           12234
+Dirty Conditions          11140
+Name: Complaint Type, dtype: int64
+
+import matplotlib
+from matplotlib import pyplot
+QUEEN[:10].plot(kind='bar')
+<matplotlib.axes._subplots.AxesSubplot object at 0x0000024284019A90>
+pyplot.show()
+>>> pyplot.title("Top 10 Queen's")
+<matplotlib.text.Text object at 0x000002428D3B4B70>
+pyplot.xlabel("Borough")
+<matplotlib.text.Text object at 0x000002428564BF98>
+pyplot.ylabel("count")
+<matplotlib.text.Text object at 0x000002428D39C550>
+pyplot.show()
+'''

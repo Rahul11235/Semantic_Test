@@ -1,0 +1,43 @@
+Header=["Complaint Type","Counts"] 
+k1=["Street Light Condition","28603"] 
+k2=["Noise - Residential","28148"] 
+k3=["HEATING","24893",] 
+k4=["Blocked Driveway","23761"] 
+k5=["Street Condition","21616"] 
+k6=["Water System","13200"] 
+k7=["Sewer","13136"] 
+k8=["GENERAL CONSTRUCTION","12523"] 
+k9=["Illegal Parking","132234"] 
+k10=["Dirty Conditions","11140"]
+
+import csv with open("K.csv","w") as fd: 
+fd1=csv.writer(fd,delimiter=",") 
+fd1.wrierow(Header) 
+fd1.writerow(k1) 
+fd1.writerow(k2) 
+fd1.writerow(k3) 
+fd1.writerow(k4) 
+fd1.writerow(k5) 
+fd1.writerow(k6) 
+fd1.writerow(k7) 
+fd1.writerow(k8) 
+fd1.writerow(k9) 
+fd1.writerow(k10)
+
+Header1=["Borough","Count"] 
+k1=["BROOKLYN","45811"] 
+k2=["BRONX","36707"] 
+k3=["MANHATTAN","36035"] 
+k4=["QUEENS","28148"] 
+k5=["STATEN ISLAND","4316"] 
+k6=["Unspecified","76"]
+
+import csv with open("R2.csv","w") as fd2: 
+Data=csv.writer(fd2,delimiter=",") 
+Data.writerow(Header1) 
+Data.writerow(k1) 
+Data.writerow(k2) 
+Data.writerow(k3) 
+Data.writerow(k4) 
+Data.writerow(k5)
+Data.writerow(k6)
